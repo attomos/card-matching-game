@@ -21,20 +21,20 @@ function shuffle(array) {
   return array;
 }
 
-// const shuffledFruits = shuffle(fruits);
+const shuffledFruits = shuffle(fruits);
 
-const shuffledFruits = [
-  "🥑",
-  "🥑",
-  "🍎",
-  "🍎",
-  "🍌",
-  "🥭",
-  "🍌",
-  "🍇",
-  "🥭",
-  "🍇",
-];
+// const shuffledFruits = [
+//   "🥑",
+//   "🥑",
+//   "🍎",
+//   "🍎",
+//   "🍌",
+//   "🥭",
+//   "🍌",
+//   "🍇",
+//   "🥭",
+//   "🍇",
+// ];
 
 let flippedCards = [];
 let flippedIndices = [];
