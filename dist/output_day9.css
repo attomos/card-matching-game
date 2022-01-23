@@ -632,6 +632,9 @@ select {
     width: 12rem;
   }
 }
+.fixed {
+  position: fixed;
+}
 .m-auto {
   margin: auto;
 }
@@ -647,6 +650,9 @@ select {
 }
 .grid {
   display: grid;
+}
+.hidden {
+  display: none;
 }
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -750,7 +756,26 @@ select {
   transform: rotateY(180deg);
 }
 
+@media (min-width: 640px) {
+
+  .sm\:fixed {
+    position: fixed;
+  }
+
+  .sm\:block {
+    display: block;
+  }
+}
+
 @media (min-width: 768px) {
+
+  .md\:fixed {
+    position: fixed;
+  }
+
+  .md\:block {
+    display: block;
+  }
 
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
