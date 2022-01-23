@@ -66,15 +66,19 @@ document.querySelector("#reset-button").addEventListener("click", () => {
   resetGame();
 });
 
-const timer = setInterval(() => {
-  if (!paused) {
-    const text = elapsedTimeSpan.innerText;
-    elapsedTimeSpan.innerText = parseInt(text, 10) + 1;
-    bgSound.play();
-  } else {
-    bgSound.stop();
-  }
-}, 1000);
+function createTimer() {
+  return setInterval(() => {
+    if (!paused) {
+      const text = elapsedTimeSpan.innerText;
+      elapsedTimeSpan.innerText = parseInt(text, 10) + 1;
+      bgSound.play();
+    } else {
+      bgSound.stop();
+    }
+  }, 1000);
+}
+
+let timer = createTimer();
 
 function checkMatch(arr) {
   if (arr.length === 2) {
@@ -90,6 +94,7 @@ function resetGame() {
   elapsedTimeSpan.innerText = "0";
   paused = true;
   updatePauseButton();
+  timer = createTimer();
 
   document.querySelectorAll(".game-card").forEach((card) => {
     card.classList.remove("active");
